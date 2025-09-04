@@ -1,0 +1,6 @@
+max_dt: 1.0e-9        # s
+probe_dt: 2.0e-7      # s
+max_iteration: 100
+eps: 1.0e-9
+difference_scheme: "second_runge_kutta"
+relative_noise_std: 1.0e-6   # the noise added to the conductance after writing.

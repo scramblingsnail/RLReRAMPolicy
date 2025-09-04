@@ -1,0 +1,2 @@
+actor_net_dims: [64, 32]
+critic_net_dims: [64, 32]

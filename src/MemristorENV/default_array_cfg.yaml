@@ -1,0 +1,50 @@
+array_size: [20, 20]
+sampler_num: 1
+
+# the std of variation of memristor parameters.
+#   including k_reset, k_set, r_on, r_off
+memristor_relative_noise: 0.5 # 1.0e-6 # 0.01
+# the std of variation of transistor parameters.
+#   including k, v_th
+transistor_relative_noise: 1.0e-6
+
+# conductance states
+bit_width: 6
+valid_conductance_range: [1.5e-2, 0.45]  # mS
+program_conductance_range: [2.0e-2, 0.4]  # mS
+
+# Applied voltages: vg_set, vds_set, vg_reset, vds_reset
+vg_set_range: [0.55, 0.65]
+vds_set_range: [0.5, 3.5]
+vg_reset_range: [0.5, 1.1]
+vds_reset_range: [-3.5, -0.5]
+
+#vg_range: [0.5, 1.1] # V
+#vds_range: [-7, 7]  # V
+
+# actual action range: avoid INF when computing atanh
+actual_vg_set_range: [0.56, 0.64] # V
+actual_vds_set_range: [0.51, 3.4] # V
+actual_vg_reset_range: [0.51, 1.09] # V
+actual_vds_reset_range: [-3.4, -0.51] # V
+
+pulse_time: 2.0e-8 # s; note that remember to modify the max_dt in simulate config.
+max_write_num: 100
+
+# writing mode.
+incremental_writing_mode: True
+only_g_observation_mode: False
+
+# Incremental Actions:
+vg_change_range: [0, 0.05]
+#vds_change_range: [0, 0.6] #[-0.6, 0.6] #[-0.3, 0.3]
+vds_set_change_range: [0, 1.5]
+vds_reset_change_range: [-1.5, 0]
+
+# selecting initial operation
+init_vg_set: 0.55
+init_vg_reset: 1
+init_vds_set: 2
+init_vds_reset: -0.5 # -0.6
+
+

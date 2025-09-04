@@ -1,0 +1,12 @@
+k_reset: 4.13e-33     # nm/s
+k_set: -4.13e-33       # nm/s
+alpha_reset: 25
+alpha_set: 25
+delta_set: 0.6
+i_reset: -1.8         # uA
+i_set: 0.2            # uA
+x_off: 1.8            # nm
+x_on: 1.2             # nm
+w_c: 0.127            # nm
+r_on: 1               # kohm
+r_off: 500            # kohm

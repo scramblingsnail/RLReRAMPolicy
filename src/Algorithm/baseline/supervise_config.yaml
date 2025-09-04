@@ -1,0 +1,6 @@
+# parameters for collecting data.
+neg_vr_step: 0.1
+pos_vg_step: 0.01
+pos_vr_step: 0.1
+
+supervise_data_num: 30000
